@@ -4,7 +4,7 @@
 #Zadanie 1
 Dane w postaci ciągów znaków zapisane w pliku [word_list.txt](http://wbzyl.inf.ug.edu.pl/nosql/doc/data/word_list.txt) zaimportowałem do bazy MongoDB za pomocą [skryptu](https://github.com/psynowczyk/Tnosql3/blob/master/import.js).
 ```js
-fs = require('fs');
+var fs = require('fs');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/test');
 var db = mongoose.connection;
@@ -33,4 +33,4 @@ db.once('open', function (callback) {
 		}
 	});
 });
-``
+```
