@@ -40,11 +40,12 @@ for(x = 0; x < result.results.length; x++) {
 printjson(anagramy);
 ```
 
-Wynik mapReduce zapisałem do pliku [anagramy.txt](https://github.com/psynowczyk/Tnosql3/blob/master/anagramy.txt)
+Wynik mapReduce zapisałem do pliku [anagramy.txt](https://github.com/psynowczyk/Tnosql3/blob/master/anagramy.txt)<br>
+Przykładowe rekordy:
 ```sh
 mongo anagramy.js > anagramy.txt
 
-head -100 anagramy.txt
+head -10 anagramy.txt
 
 [
 	"abroad,aboard",
@@ -56,95 +57,93 @@ head -100 anagramy.txt
 	"casual,causal",
 	"dramas,madras",
 	"raffia,affair",
-	"manila,lamina,animal",
-	"lariat,atrial",
-	"saliva,avails",
-	"marina,airman",
-	"pinata,patina",
-	"manual,alumna",
-	"tarsal,altars,astral",
-	"tantra,tartan,rattan",
-	"dabber,barbed",
-	"babier,barbie",
-	"rabble,barbel",
-	"braces,cabers",
-	"carobs,cobras",
-	"balded,bladed",
-	"seabed,debase",
-	"barged,badger,garbed",
-	"abides,biased",
-	"debark,barked,braked",
-	"lambed,ambled,blamed,bedlam",
-	"blared,balder",
-	"abodes,adobes",
-	"debars,breads,beards",
-	"adverb,braved",
-	"ribald,bridal",
-	"disbar,braids",
-	"adsorb,broads,boards",
-	"enable,baleen",
-	"rebate,berate,beater",
-	"bagels,gables",
-	"bather,breath",
-	"labile,liable",
-	"rabies,braise",
-	"bakers,brakes,breaks",
-	"marble,ramble,ambler,blamer",
-	"ambles,blames",
-	"nebula,unable",
-	"blares,balers",
-	"barley,bleary,barely",
-	"stable,tables,ablest,bleats",
-	"belays,basely",
-	"tablet,battle",
-	"nearby,barney",
-	"barest,breast,baster",
-	"abuser,bursae",
-	"zebras,brazes",
-	"basest,basset,bastes,beasts",
-	"bairns,brains",
-	"binary,brainy",
-	"rumbas,umbras",
-	"barony,baryon",
-	"tabors,aborts",
-	"sabots,boasts",
-	"ipecac,icecap",
-	"graced,cadger",
-	"chased,cashed",
-	"calked,lacked",
-	"candle,lanced",
-	"scaled,decals",
-	"camped,decamp",
-	"canoed,deacon",
-	"dancer,craned",
-	"dances,ascend",
-	"canted,decant",
-	"carped,redcap",
-	"cadres,sacred,scared,cedars",
-	"traced,crated,carted,redact",
-	"craved,carved",
-	"caused,sauced",
-	"raceme,amerce",
-	"seance,encase",
-	"peaces,escape",
-	"schema,sachem",
-	"chaser,search,arches",
-	"chases,cashes",
-	"chaste,cheats,sachet",
-	"eclair,lacier",
-	"anemic,cinema,iceman",
-	"packer,repack",
-	"racket,tacker",
-	"recall,cellar,caller",
-	"camels,mescal",
-	"lances,cleans",
-	"alcove,coeval",
-	"carpel,placer,parcel",
-	"claret,cartel,rectal",
-	"cleats,castle",
-	"creams,scream",
-	"canoes,oceans",
+	"manila,lamina,animal"
 ```
+
+Diagram wygenerowany za pomocą [skryptu](https://github.com/psynowczyk/Tnosql3/blob/master/anagramy_app.php)
+```php
+<?php
+
+	$anagrams = [
+		"abroad,aboard",
+		"tablas,basalt",
+		"bantam,batman",
+		"vacate,caveat",
+		"caiman,maniac",
+		"rascal,scalar",
+		"casual,causal",
+		"dramas,madras",
+		"raffia,affair",
+		"manila,lamina,animal",
+		"lariat,atrial",
+		"saliva,avails",
+		"marina,airman",
+		"pinata,patina",
+		"manual,alumna",
+		"tarsal,altars,astral",
+		"tantra,tartan,rattan",
+		"dabber,barbed",
+		"babier,barbie",
+		"rabble,barbel",
+		"braces,cabers",
+		"carobs,cobras",
+		"balded,bladed",
+		"seabed,debase",
+		"barged,badger,garbed"
+		// ...
+	];
+	
+	$colors = [
+		'#b8b8b8',
+		'#a3a3a3',
+		'#8f8f8f',
+		'#7a7a7a',
+		'#666666',
+		'#525252',
+		'#3d3d3d',
+		'#292929',
+		'#141414',
+		'#000000'	
+	];
+
+	$result = '';
+	foreach ($anagrams as $anagram) {
+		$keys = '';
+		$words = split(',', $anagram);
+		$color = $colors[count($words)-2];
+		foreach ($words as $word) {
+			$keys .= '<div class="word">'.$word.'</div>';
+		}
+		$result .= '<div class="squere" style="background-color: '.$color.';">'.$keys.'</div>';
+	}
+
+	$myfile = fopen('anagramy_graph.html', 'w') or die('Unable to open file!');
+
+	$txt = '
+		<!DOCTYPE html>
+		<html>
+			<head>
+				<meta charset="UTF-8">
+				<title>Occurrence graph</title>
+				<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+				<style>
+					body							{font-family: "Open Sans", sans-serif; margin: 20px; padding: 0; width: calc(100% - 40px); height: calc(100% - 40px);}
+						.box						{width: 728px;}
+							.squere				{float: left; padding: 2px 0; width: 55px; height: 89px; border-right: 1px solid #ffffff; border-bottom: 1px solid #ffffff;}
+							.squere:nth-child(13n)	{width: 56px; border-right: none;}
+								.word				{font-size: 11px; width: 100%; height: 12px; line-height: 12px; text-align: center; color: #ffffff;}
+				</style>
+			</head>
+			<body>
+				<div class="box">'.$result.'</div>
+			</body>
+		</html>
+	';
+	fwrite($myfile, $txt);
+	fclose($myfile);
+?>
+```
+![alt text](https://raw.githubusercontent.com/psynowczyk/Tnosql3/master/anagramy_graph.png "")
 
 #Zadanie 2
 Dane zapisane w pliku plwiki-latest-pages-articles.xml.bz2 zaimportowałem do bazy MongoDB za pomocą [skryptu](https://github.com/psynowczyk/Tnosql3/blob/master/import_xml.php).
