@@ -1,0 +1,1024 @@
+
+		<!DOCTYPE html>
+		<html>
+			<head>
+				<meta charset="UTF-8">
+				<title>Occurrence graph</title>
+				<style>
+					body							{margin: 20px; padding: 0; width: calc(100% - 40px); height: calc(100% - 40px);}
+						.keys						{float: left; width: 100px; margin-right: 10px; text-align: right;}
+							.key					{font-size: 9px; margin-top: 1px; width: 100%; height: 9px; line-height: 9px;}
+							.key:first-child	{margin-top: 0;}
+						.box						{float: left; padding-left: 10px; width: 607px; border-left: 1px solid #000000;}
+							.bar					{margin-top: 1px; width: inherit; height: 9px; line-height: 9px;}
+								.stick			{float: left; max-width: 507px; height: inherit; background-color: #247eb3;}
+								.value			{float: left; font-size: 9px; margin-left: 2px; width: 98px; height: inherit;}
+							.bar:first-child	{margin-top: 0;}
+				</style>
+			</head>
+			<body>
+				<div class="keys"><div class="key">w</div><div class="key">i</div><div class="key">align</div><div class="key">–</div><div class="key">na</div><div class="key">z</div><div class="key">ref</div><div class="key">data</div><div class="key">Kategoria</div><div class="key">do</div><div class="key">center</div><div class="key">się</div><div class="key">http</div><div class="key">br</div><div class="key">W</div><div class="key">www</div><div class="key">left</div><div class="key">tytuł</div><div class="key">roku</div><div class="key">small</div><div class="key">a</div><div class="key">style</div><div class="key">bgcolor</div><div class="key">flaga</div><div class="key">px</div><div class="key">nie</div><div class="key">r</div><div class="key">RD</div><div class="key">jest</div><div class="key">pl</div><div class="key">name</div><div class="key">o</div><div class="key">język</div><div class="key">nazwa</div><div class="key">Plik</div><div class="key">to</div><div class="key">przez</div><div class="key">url</div><div class="key">infobox</div><div class="key">span</div><div class="key">com</div><div class="key">od</div><div class="key">of</div><div class="key">miejsce</div><div class="key">stronę</div><div class="key">rok</div><div class="key">dostępu</div><div class="key">cytuj</div><div class="key">width</div><div class="key">Flaga</div><div class="key">gmina</div><div class="key">en</div><div class="key">commons</div><div class="key">right</div><div class="key">class</div><div class="key">A</div><div class="key">opis</div><div class="key">oraz</div><div class="key">score</div><div class="key">jako</div><div class="key">m</div><div class="key">Wikipedysta</div><div class="key">jpg</div><div class="key">opublikowany</div><div class="key">de</div><div class="key">nbsp</div><div class="key">po</div><div class="key">•</div><div class="key">svg</div><div class="key">ur</div><div class="key">imię</div><div class="key">nazwisko</div><div class="key">Dyskusja</div><div class="key">I</div><div class="key">s</div><div class="key">div</div><div class="key">że</div><div class="key">B</div><div class="key">II</div><div class="key">autor</div><div class="key">zdjęcie</div><div class="key">F</div><div class="key">za</div><div class="key">color</div><div class="key">html</div><div class="key">został</div><div class="key">text</div><div class="key">u</div><div class="key">bioindex</div><div class="key">państwo</div><div class="key">dla</div><div class="key">C</div><div class="key">background</div><div class="key">in</div><div class="key">x</div><div class="key">powiat</div><div class="key">województwo</div><div class="key">Mistrzostwa</div><div class="key">font</div><div class="key">liczba</div><div class="key">kod</div><div class="key">org</div><div class="key">The</div><div class="key">numer</div><div class="key">pod</div><div class="key">był</div><div class="key">E</div><div class="key">the</div><div class="key">f</div><div class="key">Cytuj</div><div class="key">tym</div><div class="key">d</div><div class="key">Przypisy</div><div class="key">Polski</div><div class="key">latach</div><div class="key">colspan</div><div class="key">CEST</div><div class="key">jego</div><div class="key">Warszawa</div><div class="key">Państwo</div><div class="key">USA</div><div class="key">co</div><div class="key">strony</div><div class="key">id</div><div class="key">Świata</div><div class="key">są</div><div class="key">ze</div><div class="key">wikipedysty</div><div class="key">też</div><div class="key">jak</div><div class="key">grafika</div><div class="key">jednostka</div><div class="key">września</div><div class="key">dyskusja</div><div class="key">wsi</div><div class="key">lub</div><div class="key">Bibliografia</div><div class="key">miejscowość</div><div class="key">października</div><div class="key">zewnętrzne</div><div class="key">team</div><div class="key">zdjęcia</div><div class="key">Linki</div><div class="key">herb</div><div class="key">thumb</div><div class="key">description</div><div class="key">także</div><div class="key">książkę</div><div class="key">wydawca</div><div class="key">title</div><div class="key">km</div><div class="key">rowspan</div><div class="key">D</div><div class="key">tego</div><div class="key">grudnia</div><div class="key">śmierci</div><div class="key">lat</div><div class="key">p</div><div class="key">Q</div><div class="key">przy</div><div class="key">Polska</div><div class="key">stycznia</div><div class="key">php</div><div class="key">marca</div><div class="key">S</div><div class="key">sup</div><div class="key">nr</div><div class="key">wysokość</div><div class="key">CET</div><div class="key">Na</div><div class="key">border</div><div class="key">and</div><div class="key">maja</div><div class="key">reprezentacja</div><div class="key">listopada</div><div class="key">mpl</div><div class="key">urodzenia</div><div class="key">piłce</div><div class="key">gminy</div><div class="key">DEFAULTSORT</div><div class="key">Po</div><div class="key">który</div><div class="key">lutego</div><div class="key">zespół</div><div class="key">POL</div><div class="key">sierpnia</div><div class="key">Polsce</div><div class="key">e</div><div class="key">stopniN</div><div class="key">polski</div><div class="key">minutN</div><div class="key">ale</div><div class="key">kwietnia</div><div class="key">File</div><div class="key">brak</div><div class="key">edit</div><div class="key">ma</div><div class="key">adres</div><div class="key">M</div><div class="key">lipca</div></div>
+				<div class="box">
+			<div class="bar">
+				<div class="stick" style="width: 100%;"></div>
+				<div class="value">13318251</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 42.60189269597%;"></div>
+				<div class="value">5673827</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 36.871440551766%;"></div>
+				<div class="value">4910631</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 36.13483482178%;"></div>
+				<div class="value">4812528</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 33.667438765045%;"></div>
+				<div class="value">4483914</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 33.12201429452%;"></div>
+				<div class="value">4411273</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 32.017807743674%;"></div>
+				<div class="value">4264212</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 26.243318285562%;"></div>
+				<div class="value">3495151</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 23.796262737502%;"></div>
+				<div class="value">3169246</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 21.201094648239%;"></div>
+				<div class="value">2823615</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 20.417898716581%;"></div>
+				<div class="value">2719307</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 19.309712664223%;"></div>
+				<div class="value">2571716</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 17.453305242558%;"></div>
+				<div class="value">2324475</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 16.677895618576%;"></div>
+				<div class="value">2221204</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 15.5645962822%;"></div>
+				<div class="value">2072932</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 15.41833833887%;"></div>
+				<div class="value">2053453</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 15.300522568617%;"></div>
+				<div class="value">2037762</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 12.527072811588%;"></div>
+				<div class="value">1668387</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 11.350244112384%;"></div>
+				<div class="value">1511654</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 11.012557129311%;"></div>
+				<div class="value">1466680</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 10.881841767361%;"></div>
+				<div class="value">1449271</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 10.757133200148%;"></div>
+				<div class="value">1432662</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 10.516073018897%;"></div>
+				<div class="value">1400557</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 10.289782044204%;"></div>
+				<div class="value">1370419</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 10.05879075263%;"></div>
+				<div class="value">1339655</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 9.6910022194356%;"></div>
+				<div class="value">1290672</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 9.6611109071304%;"></div>
+				<div class="value">1286691</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 9.5776464942732%;"></div>
+				<div class="value">1275575</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 9.4612348122888%;"></div>
+				<div class="value">1260071</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 9.2784930994317%;"></div>
+				<div class="value">1235733</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 8.2460377117085%;"></div>
+				<div class="value">1098228</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 8.0929094969002%;"></div>
+				<div class="value">1077834</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.9580119041156%;"></div>
+				<div class="value">1059868</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.9364174770396%;"></div>
+				<div class="value">1056992</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.6854836269417%;"></div>
+				<div class="value">1023572</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.6735901733644%;"></div>
+				<div class="value">1021988</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.5907714909413%;"></div>
+				<div class="value">1010958</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.550225626473%;"></div>
+				<div class="value">1005558</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.4757338632528%;"></div>
+				<div class="value">995637</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.4445886325464%;"></div>
+				<div class="value">991489</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.394762270211%;"></div>
+				<div class="value">984853</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.2844024339232%;"></div>
+				<div class="value">970155</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.2090847364267%;"></div>
+				<div class="value">960124</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.1995864922504%;"></div>
+				<div class="value">958859</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 7.152853629204%;"></div>
+				<div class="value">952635</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 6.9087374911315%;"></div>
+				<div class="value">920123</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 6.8240416853534%;"></div>
+				<div class="value">908843</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 6.7141548841511%;"></div>
+				<div class="value">894208</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 6.5112153239941%;"></div>
+				<div class="value">867180</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 6.4638742729807%;"></div>
+				<div class="value">860875</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 6.2842335679062%;"></div>
+				<div class="value">836950</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 6.0761657067433%;"></div>
+				<div class="value">809239</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 6.0743411428423%;"></div>
+				<div class="value">808996</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.9627198796599%;"></div>
+				<div class="value">794130</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.8429519011167%;"></div>
+				<div class="value">778179</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.6569515021154%;"></div>
+				<div class="value">753407</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.5859136458684%;"></div>
+				<div class="value">743946</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.5490244176957%;"></div>
+				<div class="value">739033</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.5437459468214%;"></div>
+				<div class="value">738330</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.4255772773767%;"></div>
+				<div class="value">722592</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.417663325312%;"></div>
+				<div class="value">721538</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.3894088645724%;"></div>
+				<div class="value">717775</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.3348071004218%;"></div>
+				<div class="value">710503</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.3250911099363%;"></div>
+				<div class="value">709209</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.3174624806215%;"></div>
+				<div class="value">708193</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.2725917239433%;"></div>
+				<div class="value">702217</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.2513727215383%;"></div>
+				<div class="value">699391</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.2103688389714%;"></div>
+				<div class="value">693930</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.0079773988341%;"></div>
+				<div class="value">666975</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 5.0024736731572%;"></div>
+				<div class="value">666242</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 4.8930824325206%;"></div>
+				<div class="value">651673</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 4.8334499777786%;"></div>
+				<div class="value">643731</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 4.8197920282476%;"></div>
+				<div class="value">641912</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 4.7622994941303%;"></div>
+				<div class="value">634255</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 4.6466686954616%;"></div>
+				<div class="value">618855</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 4.6453096581526%;"></div>
+				<div class="value">618674</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 4.5522418822111%;"></div>
+				<div class="value">606279</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 4.4013587069353%;"></div>
+				<div class="value">586184</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 4.3396614165028%;"></div>
+				<div class="value">577967</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 4.1138810193621%;"></div>
+				<div class="value">547897</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 4.0721488129335%;"></div>
+				<div class="value">542339</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 4.0010358717522%;"></div>
+				<div class="value">532868</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.8828371683339%;"></div>
+				<div class="value">517126</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.8798938389132%;"></div>
+				<div class="value">516734</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.8740897734995%;"></div>
+				<div class="value">515961</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.8124300255341%;"></div>
+				<div class="value">507749</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.78609773911%;"></div>
+				<div class="value">504242</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.720083064961%;"></div>
+				<div class="value">495450</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.7181533821521%;"></div>
+				<div class="value">495193</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.6965139041155%;"></div>
+				<div class="value">492311</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.6793419796638%;"></div>
+				<div class="value">490024</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.6592943022323%;"></div>
+				<div class="value">487354</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.6413189689847%;"></div>
+				<div class="value">484960</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.6205504761849%;"></div>
+				<div class="value">482194</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.5949915645831%;"></div>
+				<div class="value">478790</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.5596716115352%;"></div>
+				<div class="value">474086</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.5511719969837%;"></div>
+				<div class="value">472954</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.5202294955997%;"></div>
+				<div class="value">468833</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.5011579223128%;"></div>
+				<div class="value">466293</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.4797887500393%;"></div>
+				<div class="value">463447</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.4722652396324%;"></div>
+				<div class="value">462445</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.465072102936%;"></div>
+				<div class="value">461487</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.4520523753457%;"></div>
+				<div class="value">459753</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.4473670754516%;"></div>
+				<div class="value">459129</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.4452046293466%;"></div>
+				<div class="value">458841</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.4278750265331%;"></div>
+				<div class="value">456533</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.3808793662171%;"></div>
+				<div class="value">450274</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.3308577830527%;"></div>
+				<div class="value">443612</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.3195499919622%;"></div>
+				<div class="value">442106</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.253730538642%;"></div>
+				<div class="value">433340</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.2409811168148%;"></div>
+				<div class="value">431642</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.2346889993288%;"></div>
+				<div class="value">430804</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.1939028630711%;"></div>
+				<div class="value">425372</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.1742756612711%;"></div>
+				<div class="value">422758</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.1641091611804%;"></div>
+				<div class="value">421404</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.1537098977936%;"></div>
+				<div class="value">420019</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.1442867385515%;"></div>
+				<div class="value">418764</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.0723403546006%;"></div>
+				<div class="value">409182</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.0506032661496%;"></div>
+				<div class="value">406287</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.0118669485956%;"></div>
+				<div class="value">401128</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 3.0045311505242%;"></div>
+				<div class="value">400151</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.9937039030125%;"></div>
+				<div class="value">398709</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.9793401550999%;"></div>
+				<div class="value">396796</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.9536085481495%;"></div>
+				<div class="value">393369</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.8981583242424%;"></div>
+				<div class="value">385984</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.897114643657%;"></div>
+				<div class="value">385845</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.8794546671331%;"></div>
+				<div class="value">383493</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.8240645111734%;"></div>
+				<div class="value">376116</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.814761487826%;"></div>
+				<div class="value">374877</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.7226923415094%;"></div>
+				<div class="value">362615</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.6555739188276%;"></div>
+				<div class="value">353676</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.6293092088443%;"></div>
+				<div class="value">350178</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.5796029824036%;"></div>
+				<div class="value">343558</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.5780937752262%;"></div>
+				<div class="value">343357</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.5751429373121%;"></div>
+				<div class="value">342964</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.5749251910029%;"></div>
+				<div class="value">342935</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.5744296304372%;"></div>
+				<div class="value">342869</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.5351602098504%;"></div>
+				<div class="value">337639</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.513595816748%;"></div>
+				<div class="value">334767</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.5036470629665%;"></div>
+				<div class="value">333442</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.4863024431661%;"></div>
+				<div class="value">331132</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.4793195442855%;"></div>
+				<div class="value">330202</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.4580404739331%;"></div>
+				<div class="value">327368</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.450209115296%;"></div>
+				<div class="value">326325</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.4433388438167%;"></div>
+				<div class="value">325410</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.4387586628304%;"></div>
+				<div class="value">324800</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.4119157988538%;"></div>
+				<div class="value">321225</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.3682013501623%;"></div>
+				<div class="value">315403</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.3587031059859%;"></div>
+				<div class="value">314138</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.3415987579751%;"></div>
+				<div class="value">311860</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.3391960400806%;"></div>
+				<div class="value">311540</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.3204923829713%;"></div>
+				<div class="value">309049</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.3180220886361%;"></div>
+				<div class="value">308720</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.312495837479%;"></div>
+				<div class="value">307984</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.3108064264595%;"></div>
+				<div class="value">307759</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.3052876837957%;"></div>
+				<div class="value">307024</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.2970733919942%;"></div>
+				<div class="value">305930</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.2964501870403%;"></div>
+				<div class="value">305847</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.2926433808764%;"></div>
+				<div class="value">305340</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.2780543781612%;"></div>
+				<div class="value">303397</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.2705383762478%;"></div>
+				<div class="value">302396</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.2568128502759%;"></div>
+				<div class="value">300568</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.256332306697%;"></div>
+				<div class="value">300504</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.2384545838639%;"></div>
+				<div class="value">298123</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.2310812433254%;"></div>
+				<div class="value">297141</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.2310136668846%;"></div>
+				<div class="value">297132</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.2051619240394%;"></div>
+				<div class="value">293689</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.1889360697587%;"></div>
+				<div class="value">291528</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.184115616983%;"></div>
+				<div class="value">290886</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.1840480405423%;"></div>
+				<div class="value">290877</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.183740192312%;"></div>
+				<div class="value">290836</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.1697443605771%;"></div>
+				<div class="value">288972</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.1694590378271%;"></div>
+				<div class="value">288934</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.1649464332817%;"></div>
+				<div class="value">288333</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.1606365580586%;"></div>
+				<div class="value">287759</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.1600283700915%;"></div>
+				<div class="value">287678</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.1594201821245%;"></div>
+				<div class="value">287597</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.1563792422894%;"></div>
+				<div class="value">287192</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.1354680881146%;"></div>
+				<div class="value">284407</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.1310230600099%;"></div>
+				<div class="value">283815</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.130827839181%;"></div>
+				<div class="value">283789</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.1166668205908%;"></div>
+				<div class="value">281903</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.0926171161664%;"></div>
+				<div class="value">278700</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.072464319827%;"></div>
+				<div class="value">276016</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.0640548071965%;"></div>
+				<div class="value">274896</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.0625005490586%;"></div>
+				<div class="value">274689</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.0362883985292%;"></div>
+				<div class="value">271198</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 2.0265273570831%;"></div>
+				<div class="value">269898</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 1.9966510617648%;"></div>
+				<div class="value">265919</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 1.9824224667338%;"></div>
+				<div class="value">264024</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 1.972398628018%;"></div>
+				<div class="value">262689</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 1.9661665784794%;"></div>
+				<div class="value">261859</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 1.961083328434%;"></div>
+				<div class="value">261182</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 1.9529366130733%;"></div>
+				<div class="value">260097</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 1.9503536913368%;"></div>
+				<div class="value">259753</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 1.934788584477%;"></div>
+				<div class="value">257680</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 1.931267101063%;"></div>
+				<div class="value">257211</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 1.9260186641624%;"></div>
+				<div class="value">256512</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 1.9238637265509%;"></div>
+				<div class="value">256225</div>
+			</div>
+		
+			<div class="bar">
+				<div class="stick" style="width: 1.9236084377746%;"></div>
+				<div class="value">256191</div>
+			</div>
+		</div>
+			</body>
+		</html>
+	
